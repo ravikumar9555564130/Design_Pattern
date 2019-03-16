@@ -1,4 +1,4 @@
-package builder.RecursiveGenerics;
+package creational.builder.RecursiveGenerics;
 
 // builder inheritance with recursive generics
 

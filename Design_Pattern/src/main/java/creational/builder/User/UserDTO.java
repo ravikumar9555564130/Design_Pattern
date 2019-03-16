@@ -1,4 +1,4 @@
-package builder.User;
+package creational.builder.User;
 
 //Interface implemented by "products"
 public interface UserDTO {

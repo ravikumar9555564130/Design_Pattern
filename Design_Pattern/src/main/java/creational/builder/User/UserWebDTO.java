@@ -1,4 +1,4 @@
-package builder.User;
+package creational.builder.User;
 
 //A product in builder pattern
 public class UserWebDTO implements UserDTO {

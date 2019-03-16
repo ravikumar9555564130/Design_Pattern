@@ -1,4 +1,4 @@
-package builder.User;
+package creational.builder.User;
 
 public class Address {
 

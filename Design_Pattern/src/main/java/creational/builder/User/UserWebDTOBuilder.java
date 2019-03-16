@@ -1,4 +1,4 @@
-package builder.User;
+package creational.builder.User;
 
 import java.time.LocalDate;
 import java.time.Period;

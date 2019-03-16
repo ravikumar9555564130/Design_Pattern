@@ -1,32 +1,30 @@
-package builder.User2;
+package creational.builder.User;
 
 import java.time.LocalDate;
-import java.util.Calendar;
 
-import builder.User.Address;
-import builder.User.User;
-import builder.User2.UserDTO.UserDTOBuilder;
-
+//This is our client which also works as "director"
 public class Client {
 
 	public static void main(String[] args) {
-		
 		User user = createUser();
-		// Client has to provide director with concrete builder
-		UserDTO dto = directBuild(UserDTO.getBuilder(), user);
+		UserDTOBuilder builder = new UserWebDTOBuilder();
+		//Client has to provide director with concrete builder
+		UserDTO dto = directBuild(builder, user);
 		System.out.println(dto);
 	}
-
+	
 	/**
-	 * This method serves the role of director in builder pattern.
+	 * This method serves the role of director in builder pattern. 
 	 */
 	private static UserDTO directBuild(UserDTOBuilder builder, User user) {
 		return builder.withFirstName(user.getFirstName()).withLastName(user.getLastName())
-				.withBirthday(user.getBirthday()).withAddress(user.getAddress()).build();
+			   .withAddress(user.getAddress())
+			   .withBirthday(user.getBirthday())
+			   .build();
 	}
-
+	
 	/**
-	 * Returns a sample user.
+	 * Returns a sample user. 
 	 */
 	public static User createUser() {
 		User user = new User();
@@ -42,5 +40,4 @@ public class Client {
 		user.setAddress(address);
 		return user;
 	}
-
 }

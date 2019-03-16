@@ -1,9 +1,9 @@
-package builder.User2;
+package creational.builder.User2;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-import builder.User.Address;
+import creational.builder.User.Address;
 
 //Product class
 public class UserDTO {
